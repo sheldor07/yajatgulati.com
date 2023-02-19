@@ -1,0 +1,33 @@
+.header{
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    padding:100px 150px;
+
+}
+.header-intro{
+    margin-top:50px;
+    font-size:32pt;
+    text-align:left;
+    margin-bottom:150px;
+}
+.header-tagline{
+    padding-right:40%;
+    font-size:30pt;
+    text-align:left;
+}
+.header-contact{
+    margin-top:50px;
+    font-size:16pt;
+    padding-right:40%;
+    text-align:left;
+}
+@media (max-width:400px){
+    .header{
+        padding:0px;
+    }
+    .header-intro{
+        padding-right:0px;
+        text-align: justify;
+    }
+}
