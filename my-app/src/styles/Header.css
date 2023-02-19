@@ -13,7 +13,7 @@
 }
 .header-tagline{
     padding-right:40%;
-    font-size:30pt;
+    font-size:24pt;
     text-align:left;
 }
 .header-contact{
@@ -24,10 +24,11 @@
 }
 @media (max-width:400px){
     .header{
-        padding:0px;
+        padding:10px;
     }
-    .header-intro{
-        padding-right:0px;
-        text-align: justify;
+    .header-tagline{
+        padding:0px;
+        text-align: left;
+        font-size:24pt;
     }
 }
