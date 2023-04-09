@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
-
+import Script from 'next/script'
 export default function Document() {
   return (
     <Html lang="en">
@@ -20,16 +20,19 @@ export default function Document() {
           content="software, developer, web development, AI, OpenAI, NextJS, TailwindCSS, Supabase, ReactJS, love letter, book club"
         ></meta>
       </Head>
-
-      <script
-        async
+      <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-6L79FHE18Q"
-      ></script>
-      <script>
-        window.dataLayer = window.dataLayer || []; function gtag()
-        {dataLayer.push(arguments)}
-        gtag('js', new Date()); gtag('config', 'G-6L79FHE18Q');
-      </script>
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-6L79FHE18Q');
+        `}
+      </Script>
       <body>
         <Main />
         <NextScript />
