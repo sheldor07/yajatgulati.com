@@ -6,9 +6,9 @@ import LinkArrow from "./components/LinkArrow";
 import Header from "./components/Header";
 export default function Home() {
   return (
-    <div className="lg:px-72 pt-10 ">
+    <div className="px-5 sm:px-24 lg:px-72 pt-10 ">
       <Header />
-      <main className=" lg:pt-32  min-h-screen">
+      <main className="pt-5 sm:pt-10 lg:pt-32  min-h-screen">
         <div className="flex flex-col">
           <div className="flex flex-row">
             <Image
@@ -18,13 +18,13 @@ export default function Home() {
               height="120"
             />
             <div className="px-10">
-              <h1 className="text-4xl">👋 Hi, I am Yajat</h1>
+              <h1 className="text-2xl md:text-4xl">👋 Hi, I am Yajat</h1>
               <p className="pt-5 px-5 text-xl text-slate-600">
                 I build software
               </p>
             </div>
           </div>
-          <div className="lg:mt-24">
+          <div className="mt-10 lg:mt-24">
             <h1 className="text-2xl">about me</h1>
             <p className="pt-5 text-xl text-slate-500">
               Hey! I’m an 18 y/o studying CS and Business at Nanyang
