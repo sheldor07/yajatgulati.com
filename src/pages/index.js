@@ -69,7 +69,7 @@ export default function Home() {
                 githubLink="https://github.com/sheldor07/gpt-book-club"
                 status="Ongoing"
                 description="GPT Book Club is an innovative, AI-powered platform that generates concise and engaging book guides, utilizing OpenAI's GPT-3.5 technology. The project aims to modernize the reading experience by delivering essential insights efficiently, catering to the needs of today's busy readers."
-                tools={["NextJS", "TailwindCSS", "Supabase", "OpenAI API"]}
+                tools={["NextJS", "TailwindCSS", "Supabase", "OpenAI"]}
               />
               <ProjectCard
                 name="Valentine GPT"
