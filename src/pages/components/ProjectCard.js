@@ -9,7 +9,7 @@ export default function ProjectCard ({name, description, githubLink, link,status
             <a className="mt-2 text-slate-600 flex flex-row items-center" target="__blank" href={githubLink}>Github<div className="w-4 h-4"> <LinkArrow/></div></a>
             </div>
             <p className= "mt-5 text-gray-500">{description}</p>
-            <div className="text-lg flex flex-row gap-2 align-middle">tools: {tools.map(
+            <div className="text-lg flex flex-row gap-2 align-middle">tools: { tools?'':tools.map(
                 //write a function to make a small grey box with the tool name
                 (tool) => {
                     return(
