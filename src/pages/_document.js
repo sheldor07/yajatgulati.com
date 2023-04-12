@@ -14,29 +14,25 @@ export default function Document() {
         <meta
           name="description"
           content="18-year-old CS and Business student building software applications using new technologies. Currently open for exciting internships for the summer of 2023."
-        />
+        ></meta>
         <meta
           name="keywords"
           content="software, developer, web development, AI, OpenAI, NextJS, TailwindCSS, Supabase, ReactJS, love letter, book club"
-        ></meta>
+        > </meta>
       </Head>
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-6L79FHE18Q"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-6L79FHE18Q');
-        `}
-      </Script>
+      
       <body>
         <Main />
         <NextScript />
       </body>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-6L79FHE18Q"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)}
+        gtag('js', new Date());
+
+        gtag('config', 'G-6L79FHE18Q');
+      </script>
     </Html>
   );
 }
