@@ -6,9 +6,9 @@ import LinkArrow from "./components/LinkArrow";
 import Header from "./components/Header";
 export default function Home() {
   return (
-    <div className="px-5 sm:px-24 lg:px-72 pt-10 ">
+    <div className="px-5 pt-10 sm:px-24 lg:px-72 ">
       <Header />
-      <main className="pt-5 sm:pt-10 lg:pt-32  min-h-screen">
+      <main className="min-h-screen pt-5 sm:pt-10 lg:pt-32">
         <div className="flex flex-col">
           <div className="flex flex-row">
             <Image
@@ -17,9 +17,9 @@ export default function Home() {
               width="120"
               height="120"
             />
-            <div className="px-10">
+            <div className="px-2 sm:px-10">
               <h1 className="text-2xl md:text-4xl">👋 Hi, I am Yajat</h1>
-              <p className="pt-5 px-5 text-xl text-slate-600">
+              <p className="px-5 pt-5 text-xl text-slate-600">
                 I build software
               </p>
             </div>
@@ -33,7 +33,7 @@ export default function Home() {
               web-apps that use OpenAI’s API.
             </p>
           </div>
-          <div className="mt-10 p-10 text-lg bg-green-300 rounded-xl ">
+          <div className="p-10 mt-10 text-lg bg-green-300 rounded-xl ">
             <p>
               I am currently open for internships for the summer of 2023, my
               experience is primarily in web development but I’m open to working
@@ -45,7 +45,7 @@ export default function Home() {
             <div className="flex flex-row gap-1a">
               <a
                 href="#"
-                className="bg-black text-lg text-white rounded-lg mt-10 p-2"
+                className="p-2 mt-10 text-lg text-white bg-black rounded-lg"
               >
                 Get in Touch
               </a>
@@ -62,7 +62,7 @@ export default function Home() {
           </div>
           <div id="projects" className="mt-10">
             <h1 className="text-2xl">projects.</h1>
-            <div className="mt-10 flex flex-col gap-3">
+            <div className="flex flex-col gap-3 mt-10">
               <ProjectCard
                 name="GPT Book Club"
                 link="https://gptbook.club"
@@ -81,8 +81,8 @@ export default function Home() {
               />
             </div>
           </div>
-          <div id="contact" className=" flex flex-col gap-5 mt-10">
-            <h1 className="text-2xl mb-5 ">contact me</h1>
+          <div id="contact" className="flex flex-col gap-5 mt-10 ">
+            <h1 className="mb-5 text-2xl ">contact me</h1>
             <div className="flex flex-row gap-3">
               <p className="text-xl text-slate-800"> LinkedIn </p>
               <a

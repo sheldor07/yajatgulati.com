@@ -8,11 +8,11 @@ export default function ProjectCard({
   tools,
 }) {
   return (
-    <div className="my-5 px-5 border-l-2 border-gray-400">
+    <div className="px-5 my-5 border-l-2 border-gray-400">
       <h1 className="text-xl">{name}</h1>
       <div className="flex flex-row gap-3">
         <a
-          className="mt-2 text-slate-600 flex flex-row items-center"
+          className="flex flex-row items-center mt-2 text-slate-600"
           target="__blank"
           href={link}
         >
@@ -23,7 +23,7 @@ export default function ProjectCard({
           </div>
         </a>
         <a
-          className="mt-2 text-slate-600 flex flex-row items-center"
+          className="flex flex-row items-center mt-2 text-slate-600"
           target="__blank"
           href={githubLink}
         >
@@ -35,14 +35,14 @@ export default function ProjectCard({
         </a>
       </div>
       <p className="mt-5 text-gray-500">{description}</p>
-      <div className="text-lg flex flex-row gap-2 align-middle">
+      <div className="flex flex-col gap-2 text-lg align-middle md:flex-row">
         tools:{" "}
         {tools
           ? tools.map(
               //write a function to make a small grey box with the tool name
               (tool) => {
                 return (
-                  <div className="text-sm bg-gray-300 rounded-md p-1 m-1">
+                  <div className="p-1 m-1 text-sm bg-gray-300 rounded-md">
                     {tool}
                   </div>
                 );
