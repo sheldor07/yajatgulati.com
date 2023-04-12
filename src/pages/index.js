@@ -44,7 +44,7 @@ export default function Home() {
             </p>
             <div className="flex flex-row gap-1a">
               <a
-                href="#"
+                href="mailto:yajatgulati01@gmail.com"
                 className="p-2 mt-10 text-lg text-white bg-black rounded-lg"
               >
                 Get in Touch

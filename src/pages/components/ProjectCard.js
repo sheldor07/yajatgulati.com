@@ -40,9 +40,9 @@ export default function ProjectCard({
         {tools
           ? tools.map(
               //write a function to make a small grey box with the tool name
-              (tool) => {
+              (tool,index) => {
                 return (
-                  <div className="p-1 m-1 text-sm bg-gray-300 rounded-md">
+                  <div key ={index}className="p-1 m-1 text-sm bg-gray-300 rounded-md">
                     {tool}
                   </div>
                 );
