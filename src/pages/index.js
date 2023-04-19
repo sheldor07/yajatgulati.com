@@ -60,7 +60,7 @@ export default function Home() {
             </div>
           </div>
           <div name="projects" className="mt-10">
-            <h1 className="text-2xl">projects.</h1>
+            <h1 className="text-2xl">projects</h1>
             <div className="flex flex-col gap-3 mt-10">
               <ProjectCard
                 name="GPT Book Club"
