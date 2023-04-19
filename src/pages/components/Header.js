@@ -1,20 +1,34 @@
-import Link from "next/link"
-function scrollToMyDiv(divId) {
-    //write a function that takes in teh ref of a div and scrolls to it
-    //use this function in the link component
+import { Link, animateScroll as scroll } from "react-scroll";
 
-    document.getElementById(divId).scrollIntoView({ behavior: 'smooth' });
+export default function Header() {
+  return (
+    //make a header with a navbar at the top in the right
+    <div className="flex flex-row items-center justify-between">
+      <div className="flex flex-row gap-5">
 
-  }
-export default function Header(){
-    return(
-        //make a header with a navbar at the top in the right
-        <div className="flex flex-row justify-between items-center">
-            <div className="flex flex-row gap-5">
-                <Link href="#about">about</Link>
-                <Link href="#projects">projects</Link>
-                <Link href="#contact">contact</Link>
-            </div>
-        </div>
-    )
+        <Link
+          className="cursor-pointer"
+          activeClass="active"
+          to="projects"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
+          projects
+        </Link>
+        <Link
+          className="cursor-pointer"
+          activeClass="active"
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
+          contact
+        </Link>
+      </div>
+    </div>
+  );
 }

@@ -36,9 +36,8 @@ export default function Home() {
           <div className="p-10 mt-10 text-lg bg-green-300 rounded-xl ">
             <p>
               I am currently open for internships for the summer of 2023, my
-              experience is primarily in web development but I’m open to working
-              on any new technology as long as the product is exciting <br></br>{" "}
-              A collaborative team of engineers and designers, who are building
+              experience is primarily in web development but I'm open to working
+              on all sorts of new technology as long as there's a collaborative team of engineers and designers, who are building
               great products. Interested in working together? Feel free to
               schedule a meet!
             </p>
@@ -60,7 +59,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div id="projects" className="mt-10">
+          <div name="projects" className="mt-10">
             <h1 className="text-2xl">projects.</h1>
             <div className="flex flex-col gap-3 mt-10">
               <ProjectCard
@@ -81,7 +80,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div id="contact" className="flex flex-col gap-5 mt-10 ">
+          <div id="contact" className="flex flex-col gap-5 mt-10 mb-24 ">
             <h1 className="mb-5 text-2xl ">contact me</h1>
             <div className="flex flex-row gap-3">
               <p className="text-xl text-slate-800"> LinkedIn </p>
