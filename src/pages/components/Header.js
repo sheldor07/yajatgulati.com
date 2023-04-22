@@ -28,6 +28,9 @@ export default function Header() {
         >
           contact
         </Link>
+        <a href="https://yajatgulati.hashnode.dev/">
+          blog
+        </a>
       </div>
     </div>
   );
