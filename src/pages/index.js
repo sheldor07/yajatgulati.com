@@ -37,9 +37,9 @@ export default function Home() {
             <p>
               I am currently open for internships for the summer of 2023, my
               experience is primarily in web development but I'm open to working
-              on all sorts of new technology as long as there's a collaborative team of engineers and designers, who are building
-              great products. Interested in working together? Feel free to
-              schedule a meet!
+              on all sorts of new technology as long as there's a collaborative
+              team of engineers and designers, who are building great products.
+              Interested in working together? Feel free to schedule a meet!
             </p>
             <div className="flex flex-row gap-1a">
               <a
@@ -49,7 +49,7 @@ export default function Home() {
                 Get in Touch
               </a>
               <Link
-                href="https://docs.google.com/document/d/e/2PACX-1vRPhWPQsA7vxmnAxmIP8C51fTlxue5EKWgy_BPyNAJrHiUH3qXPx7RrTTHMypfFSfvhnvaX925vIBoq/pub"
+                href="https://docs.google.com/document/d/e/2PACX-1vR3vL03Y2CoiUujMSyWJpZCQH3y-iHgmKbfhnrcrH1mM1dDoN8MA2ROzHihmaQcdBVjJ6zaGWSmdNzx/pub"
                 className="mt-10 p-2 flex  flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-green-300 text-zinc-600 font-medium text-lg"
               >
                 Resume
@@ -118,7 +118,6 @@ export default function Home() {
                 </div>
               </a>
             </div>
-            
           </div>
         </div>
       </main>
