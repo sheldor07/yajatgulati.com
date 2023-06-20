@@ -27,7 +27,7 @@ export default function Home() {
           <div className="mt-10 lg:mt-24">
             <h1 className="text-2xl">about me</h1>
             <p className="pt-5 text-xl text-slate-500">
-              Hey! I’m an 18 y/o studying CS and Business at Nanyang
+              Hey! I’m an 19 y/o studying CS and Business at Nanyang
               Technological University, Singapore. I love building new things
               and trying out new technologies. Recently, I’ve been building
               web-apps that use OpenAI’s API.
@@ -44,14 +44,12 @@ export default function Home() {
             <div className="flex flex-row gap-1a">
               <a
                 href="mailto:yajatgulati01@gmail.com"
-                className="p-2 mt-10 text-lg text-white bg-black rounded-lg"
-              >
+                className="p-2 mt-10 text-lg text-white bg-black rounded-lg">
                 Get in Touch
               </a>
               <Link
                 href="https://docs.google.com/document/d/e/2PACX-1vR3vL03Y2CoiUujMSyWJpZCQH3y-iHgmKbfhnrcrH1mM1dDoN8MA2ROzHihmaQcdBVjJ6zaGWSmdNzx/pub"
-                className="mt-10 p-2 flex  flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-green-300 text-zinc-600 font-medium text-lg"
-              >
+                className="mt-10 p-2 flex  flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-green-300 text-zinc-600 font-medium text-lg">
                 Resume
                 <div className="w-5 h-5">
                   <LinkArrow />
@@ -85,9 +83,8 @@ export default function Home() {
             <div className="flex flex-row gap-3">
               <p className="text-xl text-slate-800"> LinkedIn </p>
               <a
-                href="https://www.linkedin.com/in/yajat-gulati-7b5b1b1b3/"
-                className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-green-300 text-zinc-600 font-medium text-lg"
-              >
+                href="https://www.linkedin.com/in/yajatgulati"
+                className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-green-300 text-zinc-600 font-medium text-lg">
                 linkedin.com/in/yajatgulati{" "}
                 <div className="w-5 h-5">
                   <LinkArrow />
@@ -98,8 +95,7 @@ export default function Home() {
               <p className="text-xl text-slate-800"> Twitter </p>
               <a
                 href="https://twitter.com/GulatiYajat"
-                className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-green-300 text-zinc-600 font-medium text-lg"
-              >
+                className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-green-300 text-zinc-600 font-medium text-lg">
                 @GulatiYajat{" "}
                 <div className="w-5 h-5">
                   <LinkArrow />
@@ -107,12 +103,11 @@ export default function Home() {
               </a>
             </div>
             <div className="flex flex-row gap-3">
-              <p className="text-xl text-slate-800"> LinkedIn </p>
+              <p className="text-xl text-slate-800"> Github </p>
               <a
-                href="https://www.linkedin.com/in/yajat-gulati-7b5b1b1b3/"
-                className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-green-300 text-zinc-600 font-medium text-lg"
-              >
-                linkedin.com/in/yajatgulati{" "}
+                href="https://github.com/sheldor07"
+                className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-green-300 text-zinc-600 font-medium text-lg">
+                @sheldor07
                 <div className="w-5 h-5">
                   <LinkArrow />
                 </div>

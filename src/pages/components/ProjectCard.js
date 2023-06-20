@@ -12,24 +12,24 @@ export default function ProjectCard({
       <h1 className="text-xl">{name}</h1>
       <div className="flex flex-row gap-3">
         <a
-          className="flex flex-row items-center mt-2 text-slate-600"
+          className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 mt-2 text-slate-600"
           target="__blank"
           href={link}
         >
           Live Preview
           <div className="w-4 h-4">
-            {" "}
+        
             <LinkArrow />
           </div>
         </a>
         <a
-          className="flex flex-row items-center mt-2 text-slate-600"
+          className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 mt-2 text-slate-600"
           target="__blank"
           href={githubLink}
         >
           Github
-          <div className="w-4 h-4">
-            {" "}
+          <div className="w-5 h-5">
+            
             <LinkArrow />
           </div>
         </a>
