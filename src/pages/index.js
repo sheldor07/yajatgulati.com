@@ -6,7 +6,7 @@ import LinkArrow from "./components/LinkArrow";
 import Header from "./components/Header";
 export default function Home() {
   return (
-    <div className="px-5 pt-10 sm:px-24 lg:px-72 ">
+    <div className="px-5 pt-10 sm:px-24 xl:px-72 ">
       <Header />
       <main className="min-h-screen pt-5 sm:pt-10 lg:pt-32">
         <div className="flex flex-col">
@@ -18,30 +18,38 @@ export default function Home() {
               height="120"
             />
             <div className="px-2 sm:px-10">
-              <h1 className="text-2xl md:text-4xl">👋 Hi, I am Yajat</h1>
-              <p className="px-5 pt-5 text-xl text-slate-600">
-                I build software
+              <h1 className="text-2xl md:text-4xl">
+                <div className="inline-block hover:animate-wave ">👋</div> Hi, I
+                am Yajat
+              </h1>
+              <p className="pt-5 text-xl text-center sm:px-5 sm:text-left text-slate-600">
+                I build software to disrupt the status quo
               </p>
             </div>
           </div>
           <div className="mt-10 lg:mt-24">
-            <h1 className="text-2xl">about me</h1>
+            <h1 className="text-2xl ">about me</h1>
             <p className="pt-5 text-xl text-slate-500">
               Hey! I’m an 19 y/o studying CS and Business at Nanyang
               Technological University, Singapore. I love building new things
-              and trying out new technologies. Recently, I’ve been building
-              web-apps that use OpenAI’s API.
+              and trying out new technologies.
             </p>
           </div>
-          <div className="p-10 mt-10 text-lg bg-green-300 rounded-xl ">
+          <div className="relative p-10 mt-10 text-lg bg-green-300 rounded-xl ">
             <p>
-              I am currently open for internships for the summer of 2023, my
-              experience is primarily in web development but I'm open to working
-              on all sorts of new technology as long as there's a collaborative
-              team of engineers and designers, who are building great products.
-              Interested in working together? Feel free to schedule a meet!
+              I am currently collaborating with Dr. Fan and Prof. Zhu from NTU
+              on a research project that utilizes AI for evaluating
+              inter-disciplinary essays. Additionally, I am developing a web
+              application for a course called CC0001, aiming to enhance the
+              writing experience by providing students with efficient access to
+              essential insights. Whether you are interested in project
+              collaboration or simply want to have a chat, feel free to reach
+              out to me 👍
             </p>
-            <div className="flex flex-row gap-1a">
+            <span className="absolute text-sm right-10 bottom-30 text-slate-500">
+              Last updated: 21 June 2023
+            </span>
+            <div className="flex flex-row gap-4">
               <a
                 href="mailto:yajatgulati01@gmail.com"
                 className="p-2 mt-10 text-lg text-white bg-black rounded-lg">
