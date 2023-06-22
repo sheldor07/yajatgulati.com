@@ -6,7 +6,7 @@ import LinkArrow from "./components/LinkArrow";
 import Header from "./components/Header";
 export default function Home() {
   return (
-    <div className="px-5 pt-10 sm:px-24 xl:px-72 ">
+    <div className="z-0 px-5 sm:px-24 xl:px-72 ">
       <Header />
       <main className="min-h-screen pt-5 sm:pt-10 lg:pt-32">
         <div className="flex flex-col">
