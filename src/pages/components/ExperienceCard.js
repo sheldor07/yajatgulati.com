@@ -55,11 +55,12 @@ export default function ExperienceCard({
 
       <div className="flex flex-col gap-2 mt-3 text-lg align-middle md:flex-row">
         Tech Stack:{" "}
-        {techStack.map((tech, index) => (
-          <div key={index} className="p-1 m-1 text-sm bg-gray-300 rounded-md">
-            {tech}
-          </div>
-        ))}
+        {techStack != undefined &&
+          techStack.map((tech, index) => (
+            <div key={index} className="p-1 m-1 text-sm bg-gray-300 rounded-md">
+              {tech}
+            </div>
+          ))}
       </div>
     </div>
   );
