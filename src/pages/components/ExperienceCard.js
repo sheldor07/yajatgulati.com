@@ -13,7 +13,7 @@ export default function ExperienceCard({
   return (
     <div className="px-5 py-5 my-5 bg-gray-50 shadow-md rounded-lg border border-gray-200">
       <h2 className="text-xl font-semibold">{position}</h2>
-      <h1 className="mt-1 text-lg font-medium">{company}</h1>
+      <h1 className="mt-1 text-lg ">{company}</h1>
 
       {(liveLink || githubLink) && (
         <div className="flex flex-row gap-3 mt-3">

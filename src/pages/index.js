@@ -23,7 +23,7 @@ export default function Home() {
                 <div className="inline-block hover:animate-wave ">👋</div> Hi, I
                 am Yajat
               </h1>
-              <p className="pt-5 text-xl text-center sm:px-5 sm:text-left text-slate-600">
+              <p className="pt-5 text-xl text-left sm:px-5 sm:text-left text-slate-600">
                 I build software to disrupt the status quo
               </p>
             </div>
@@ -83,8 +83,8 @@ export default function Home() {
                   "Microsoft Azure",
                   "Github Actions",
                 ]}
-                liveLink="https://cc001-webapp.com" // Add the actual link
-                githubLink="https://github.com/sheldor07/cc001-webapp" // Add the actual GitHub repo link
+                liveLink="https://askwaai.com" // Add the actual link
+                githubLink="https://github.com/sheldor07/askwaai" // Add the actual GitHub repo link
               />
 
               <ExperienceCard
