@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import profile_pic from "../../public/profile_pic.png";
+import profile_pic from "../../public/profile_pic.jpg";
 import ProjectCard from "./components/ProjectCard";
 import LinkArrow from "./components/LinkArrow";
 import Header from "./components/Header";
@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="z-0 px-5 sm:px-24 xl:px-72 ">
       <Header />
-      <main className="min-h-screen pt-20 sm:pt-10 lg:pt-32">
+      <main className="min-h-screen pt-20 ">
         <div className="flex flex-col">
           <div className="flex flex-row">
             <Image
@@ -17,13 +17,14 @@ export default function Home() {
               className="rounded-full"
               width="120"
               height="120"
+              style={{ objectFit: "scale-down" }}
             />
-            <div className="px-2 sm:px-10">
-              <h1 className="text-2xl md:text-4xl">
+            <div className="  px-6 sm:px-10">
+              <h1 className="text-xl md:text-4xl">
                 <div className="inline-block hover:animate-wave ">👋</div> Hi, I
                 am Yajat
               </h1>
-              <p className="pt-5 text-xl text-left sm:px-5 sm:text-left text-slate-600">
+              <p className="pt-5 sm:text-xl text-md text-left sm:px-5 sm:text-left text-slate-600">
                 I build software to disrupt the status quo
               </p>
             </div>
