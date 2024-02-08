@@ -25,7 +25,7 @@ export default function Header() {
           duration={500}>
           contact
         </Link>
-        <a href="https://yajatgulati.hashnode.dev/">blog</a>
+        <a href="https://yajatgulati.substack.com">blog</a>
       </div>
     </div>
   );
