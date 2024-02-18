@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import profile_pic from "../../public/profile_pic.jpg";
+import profile_pic from "../../public/pfp.jpeg";
 import ProjectCard from "./components/ProjectCard";
 import LinkArrow from "./components/LinkArrow";
 import Header from "./components/Header";
@@ -21,41 +21,61 @@ export default function Home() {
             />
             <div className="  px-6 sm:px-10">
               <h1 className="text-xl md:text-4xl">
-                <div className="inline-block hover:animate-wave ">👋</div> Hi, I
-                am Yajat
+                <div className=" flex flex-row ">
+                  <div
+                    className="
+                  hover:animate-wave mr-2"
+                  >
+                    👋
+                  </div>
+                  <p className="font-bold"> Hi, I am Yajat</p>
+                </div>
               </h1>
-              <p className="pt-5 sm:text-xl text-md text-left sm:px-5 sm:text-left text-slate-600">
+              <p className="pt-1 sm:text-xl text-md text-left sm:px-5 sm:text-left text-slate-600">
                 I build software to disrupt the status quo
               </p>
             </div>
           </div>
-          <div className="mt-10 lg:mt-24">
+          <div className="mt-4 lg:mt-12">
             <h1 className="text-2xl ">about me</h1>
-            <p className="pt-5 text-xl text-slate-500">
+            <p className="pt-5 text-md text-slate-500">
               Hey! I’m an 19 y/o studying CS and Business at Nanyang
               Technological University, Singapore. I love building new things
               and trying out new technologies.
             </p>
           </div>
-          <div className="relative p-10 mt-10 text-lg bg-green-300 rounded-xl ">
+          <div className="relative p-8 mt-10 text-md bg-green-300 rounded-md ">
             <p>
-              I've just started my second year at NTU, and I've taken on a whole
-              new set of responsibilities. I'll be undertaking the undergraduate
-              research program, here at NTU to work on sustanability recommender
-              systems with Alibaba-NTU Joint Research Institute (wow that's so
-              many words). But I'm also looking forward to meeting like minded
-              people through my positions as the Hackers for Charity Chairperson
-              at the NTU Open Source Society. Hopefully, my building ventures
-              will continue, I already have a couple ideas in mind. I'm nervous
+              I've well into my second year at NTU, and I've taken on a whole
+              new set of responsibilities. I've been participating in
+              hackathons, and just won my first one
+              <a
+                className="underline hover:bg-black hover:text-white hover:p-1 rounded-md duration-200"
+                href="https://yajatgulati.substack.com"
+                target="__blank"
+              >
+                (see blog)
+              </a>
+              . In my role as Hackers4Charity Chairperson, we're working with
+              WeCare Singapore to do data analysis on their patient data. At{" "}
+              <a
+                className="underline hover:bg-black hover:text-white hover:p-1 rounded-md duration-200"
+                href="https://alaglabs.com"
+                target="__blank"
+              >
+                Alag Labs
+              </a>{" "}
+              we're building LookOut v2.0, an IoT device to help the visually
+              impaired become more independent using AI. As usual, I'm nervous
               and excited.
             </p>
-            <span className="absolute text-sm right-10 bottom-30 text-slate-500">
-              Last updated: 21 Aug 2023
+            <span className="absolute text-sm right-10 bottom-20 text-slate-500">
+              Last updated: 18 Feb 2024
             </span>
-            <div className="flex flex-row gap-4">
+            <div className="flex flex-row items-center gap-4">
               <a
                 href="mailto:yajatgulati01@gmail.com"
-                className="p-2 mt-10 text-lg text-white bg-black rounded-lg"
+                className="p-2 mt-10 text-md text-white bg-black rounded-md"
               >
                 Get in Touch
               </a>
@@ -70,13 +90,55 @@ export default function Home() {
               </Link>
             </div>
           </div>
+
+          <div name="projects" className="mt-10">
+            <h1 className="text-2xl">my projects</h1>
+            <div className="flex flex-col gap-3 mt-4">
+              <ProjectCard
+                name="Vibes"
+                link="https://devpost.com/software/vibes-1dkayc?ref_content=my-projects-tab&ref_feature=my_projects"
+                githubLink="https://github.com/sheldor07/techfest-24"
+                status="Hackathon"
+                description="Vibes is an AI music platform that was a Top 10 finalist at SCSE TechFest in February 2024. It uses advanced AI models to help content creators generate unique, royalty-free music, addressing copyright issues in the industry.
+
+                "
+                tools={["React", "shadcn/UI", "Django", "AWS"]}
+              />{" "}
+              <ProjectCard
+                name="LookOut"
+                link="https://devpost.com/software/lookout-oyrb0z?ref_content=my-projects-tab&ref_feature=my_projects"
+                status="Hackathon"
+                description="Vibes is an AI music platform that was a Top 10 finalist at SCSE TechFest in February 2024. It uses advanced AI models to help content creators generate unique, royalty-free music, addressing copyright issues in the industry.
+
+              "
+                tools={["React", "shadcn/UI", "Django", "AWS"]}
+              />
+              <ProjectCard
+                name="GPT Book Club"
+                link="https://gptbook.club"
+                githubLink="https://github.com/sheldor07/gpt-book-club"
+                status="Ongoing"
+                description="GPT Book Club is an innovative, AI-powered platform that generates concise and engaging book guides, utilizing OpenAI's GPT-3.5 technology. The project aims to modernize the reading experience by delivering essential insights efficiently, catering to the needs of today's busy readers."
+                tools={["NextJS", "TailwindCSS", "Supabase", "OpenAI"]}
+              />
+              <ProjectCard
+                name="Valentine GPT"
+                link="valentinegpt.netlify.app"
+                githubLink="https://github.com/sheldor07/valentinegpt"
+                status="Maintained"
+                description="ValentineGPT is a web app that generates a love letter for you, using OpenAI's GPT-3 technology. The project aims to make the process of writing a love letter easier, by generating a letter that is tailored to your needs."
+                tools={["ReactJS", "OpenAI API"]}
+              />
+            </div>
+          </div>
+
           <div className="mt-10">
-            <h1 className="text-2xl">work experience</h1>
-            <div className="flex flex-col gap-3 mt-10">
+            <h1 className="text-2xl">projects i've been paid to work on</h1>
+            <div className="flex flex-col gap-3 mt-4">
               <ExperienceCard
                 position="Web Developer"
                 company="School of Humanities, Nanyang Technological University"
-                description="Collaborated with Prof Joanne Chia, Anglea Frattorla, and a talented UI/UX design team from NTU's School of Art, Design, and Media. Our collective aim was to develop a state-of-the-art web application for CC001: Inquiry and Communication in an Interdisciplinary World. The centerpiece of this application is an AI-feedback mechanism designed to guide students in refining their writing prowess."
+                description="Collaborated with Prof Joanne Chia, Anglea Frattorla, and a talented UI/UX design team from NTU's School of Art, Design, and Media. Our collective aim was to develop a state-of-the-art web application for CC001: Inquiry and Communication in an Interdisciplinary World. The centerpiece of this application is an AI-feedback mechanism designed to guide students in refining their writing prowess. We got featured in NTU's HEY! Magazine's AI edition this February. The project has been handed over and being expanded by ATLAS."
                 techStack={[
                   "MongoDB",
                   "Node.js",
@@ -104,27 +166,6 @@ export default function Home() {
               />
             </div>
           </div>
-          <div name="projects" className="mt-10">
-            <h1 className="text-2xl">projects</h1>
-            <div className="flex flex-col gap-3 mt-10">
-              <ProjectCard
-                name="GPT Book Club"
-                link="https://gptbook.club"
-                githubLink="https://github.com/sheldor07/gpt-book-club"
-                status="Ongoing"
-                description="GPT Book Club is an innovative, AI-powered platform that generates concise and engaging book guides, utilizing OpenAI's GPT-3.5 technology. The project aims to modernize the reading experience by delivering essential insights efficiently, catering to the needs of today's busy readers."
-                tools={["NextJS", "TailwindCSS", "Supabase", "OpenAI"]}
-              />
-              <ProjectCard
-                name="Valentine GPT"
-                link="valentinegpt.netlify.app"
-                githubLink="https://github.com/sheldor07/valentinegpt"
-                status="Maintained"
-                description="ValentineGPT is a web app that generates a love letter for you, using OpenAI's GPT-3 technology. The project aims to make the process of writing a love letter easier, by generating a letter that is tailored to your needs."
-                tools={["ReactJS", "OpenAI API"]}
-              />
-            </div>
-          </div>
           <div id="contact" className="flex flex-col gap-5 mt-10 mb-24 ">
             <h1 className="mb-5 text-2xl ">contact me</h1>
             <div className="flex flex-row gap-3">
@@ -133,7 +174,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/yajatgulati"
                 className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-green-300 text-zinc-600 font-medium text-lg"
               >
-                linkedin.com/in/yajatgulati{" "}
+                @YajatGulati{" "}
                 <div className="w-5 h-5">
                   <LinkArrow />
                 </div>

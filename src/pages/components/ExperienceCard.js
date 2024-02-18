@@ -51,7 +51,7 @@ export default function ExperienceCard({
         </div>
       )}
 
-      <p className="mt-5 text-gray-500">{description}</p>
+      <p className="mt-5 text-gray-500 text-md">{description}</p>
 
       <div className="flex flex-col gap-2 mt-3 text-lg align-middle md:flex-row">
         Tech Stack:{" "}
