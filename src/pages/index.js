@@ -8,7 +8,6 @@ import ExperienceCard from "./components/ExperienceCard";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-
 export default function Home() {
   useEffect(() => {
     AOS.init({ duration: 500 });
@@ -82,19 +81,10 @@ export default function Home() {
             <div className="flex flex-row items-center gap-4">
               <a
                 href="mailto:yajatgulati01@gmail.com"
-                className="p-2 mt-10 text-md text-white bg-black rounded-md"
+                className="py-2 px-4 mt-10 text-md text-white bg-black rounded-md"
               >
                 Get in Touch
               </a>
-              <Link
-                href="https://docs.google.com/document/d/e/2PACX-1vR3vL03Y2CoiUujMSyWJpZCQH3y-iHgmKbfhnrcrH1mM1dDoN8MA2ROzHihmaQcdBVjJ6zaGWSmdNzx/pub"
-                className="mt-10 p-2 flex  flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-green-300 text-zinc-600 font-medium text-lg"
-              >
-                Resume
-                <div className="w-5 h-5">
-                  <LinkArrow />
-                </div>
-              </Link>
             </div>
           </div>
 
