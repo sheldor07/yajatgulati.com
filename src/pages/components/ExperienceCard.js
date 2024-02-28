@@ -11,7 +11,10 @@ export default function ExperienceCard({
   githubLink,
 }) {
   return (
-    <div className="px-5 py-5 my-5 bg-gray-50 shadow-md rounded-lg border border-gray-200">
+    <div
+      className="px-5 py-5 my-5 bg-gray-50 shadow-md rounded-lg border border-gray-200"
+      data-aos="fade-right"
+    >
       <h2 className="text-xl font-semibold">{position}</h2>
       <h1 className="mt-1 text-lg ">{company}</h1>
 

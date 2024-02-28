@@ -5,13 +5,20 @@ import ProjectCard from "./components/ProjectCard";
 import LinkArrow from "./components/LinkArrow";
 import Header from "./components/Header";
 import ExperienceCard from "./components/ExperienceCard";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 export default function Home() {
+  useEffect(() => {
+    AOS.init({ duration: 500 });
+  });
   return (
     <div className="z-0 px-5 sm:px-24 xl:px-72 ">
       <Header />
-      <main className="min-h-screen pt-20 ">
+      <main className="min-h-screen pt-20 scroll-smooth ">
         <div className="flex flex-col">
-          <div className="flex flex-row">
+          <div className="flex flex-row" data-aos="fade-up">
             <Image
               src={profile_pic}
               className="rounded-full"

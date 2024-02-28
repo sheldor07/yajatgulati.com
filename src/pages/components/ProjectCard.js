@@ -8,7 +8,7 @@ export default function ProjectCard({
   tools,
 }) {
   return (
-    <div className="px-5 my-5 border-l-2 border-gray-400">
+    <div className="px-5 my-5 border-l-2 border-gray-400" data-aos="fade-left">
       <h1 className="text-xl">{name}</h1>
       <div className="flex flex-row gap-3">
         <a
