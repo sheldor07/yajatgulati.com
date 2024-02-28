@@ -35,7 +35,7 @@ export default function ProjectCard({
         )}
       </div>
       <p className="mt-2 text-md text-gray-500">{description}</p>
-      <div className="flex gap-2 mt-1 text-lg items-center flex-row invisible md:visible">
+      <div className="flex gap-2 mt-4 text-lg items-center flex-row invisible md:visible">
         tools:{" "}
         {tools
           ? tools.map(

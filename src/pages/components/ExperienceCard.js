@@ -56,7 +56,7 @@ export default function ExperienceCard({
 
       <p className="mt-5 text-gray-500 text-md">{description}</p>
 
-      <div className="flex flex-col gap-2 mt-2 text-lg align-middle md:flex-row">
+      <div className="flex flex-col gap-2 mt-4 text-lg align-middle md:flex-row">
         tools:{" "}
         {techStack != undefined &&
           techStack.map((tech, index) => (

@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="z-0 px-5 sm:px-24 xl:px-72 ">
       <Header />
-      <main className="min-h-screen pt-20 scroll-smooth ">
+      <main className="min-h-screen pt-20 scroll-smooth overflow-hidden">
         <div className="flex flex-col">
           <div className="flex flex-row" data-aos="fade-up">
             <Image
@@ -81,7 +81,7 @@ export default function Home() {
             <div className="flex flex-row items-center gap-4">
               <a
                 href="mailto:yajatgulati01@gmail.com"
-                className="py-2 px-4 mt-10 text-md text-white bg-black rounded-md"
+                className="py-2 px-4 mt-10 text-md text-white bg-black rounded-md hover:bg-white hover:text-black duration-300 ease-in"
               >
                 Get in Touch
               </a>
