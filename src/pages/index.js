@@ -108,10 +108,8 @@ export default function Home() {
                 name="LookOut"
                 link="https://devpost.com/software/lookout-oyrb0z?ref_content=my-projects-tab&ref_feature=my_projects"
                 status="Hackathon"
-                description="Vibes is an AI music platform that was a Top 10 finalist at SCSE TechFest in February 2024. It uses advanced AI models to help content creators generate unique, royalty-free music, addressing copyright issues in the industry.
-
-              "
-                tools={["React", "shadcn/UI", "Django", "AWS"]}
+                description="Developed 'LookOut,' a device leveraging MultiModal AI to assist visually impaired users by providing spoken responses based on image analysis, showcased at National University of Singapore's Hack and Roll 2024."
+                tools={["Django", "AWS", "Python", "Arduino C"]}
               />
               <ProjectCard
                 name="GPT Book Club"
@@ -169,37 +167,37 @@ export default function Home() {
           <div id="contact" className="flex flex-col gap-5 mt-10 mb-24 ">
             <h1 className="mb-5 text-2xl ">contact me</h1>
             <div className="flex flex-row gap-3">
-              <p className="text-xl text-slate-800"> LinkedIn </p>
+              <p className="text-md text-slate-800"> LinkedIn </p>
               <a
                 href="https://www.linkedin.com/in/yajatgulati"
-                className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-green-300 text-zinc-600 font-medium text-lg"
+                className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-green-300 text-zinc-600 font-medium text-md"
               >
                 @YajatGulati{" "}
-                <div className="w-5 h-5">
+                <div className="w-4 h-4">
                   <LinkArrow />
                 </div>
               </a>
             </div>
             <div className="flex flex-row gap-3">
-              <p className="text-xl text-slate-800"> Twitter </p>
+              <p className="text-md text-slate-800"> Twitter </p>
               <a
                 href="https://twitter.com/GulatiYajat"
-                className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-green-300 text-zinc-600 font-medium text-lg"
+                className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-green-300 text-zinc-600 font-medium text-md"
               >
                 @GulatiYajat{" "}
-                <div className="w-5 h-5">
+                <div className="w-4 h-4">
                   <LinkArrow />
                 </div>
               </a>
             </div>
             <div className="flex flex-row gap-3">
-              <p className="text-xl text-slate-800"> Github </p>
+              <p className="text-md text-slate-800"> Github </p>
               <a
                 href="https://github.com/sheldor07"
-                className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-green-300 text-zinc-600 font-medium text-lg"
+                className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-green-300 text-zinc-600 font-medium text-md"
               >
                 @sheldor07
-                <div className="w-5 h-5">
+                <div className="w-4 h-4">
                   <LinkArrow />
                 </div>
               </a>

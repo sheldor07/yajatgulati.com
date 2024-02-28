@@ -17,7 +17,7 @@ export default function ProjectCard({
           href={link}
         >
           Live Preview
-          <div className="w-4 h-4">
+          <div className="w-4 h-4 mt-1">
             <LinkArrow />
           </div>
         </a>
@@ -28,14 +28,14 @@ export default function ProjectCard({
             href={githubLink}
           >
             Github
-            <div className="w-5 h-5">
+            <div className="w-4 h-4 mt-1">
               <LinkArrow />
             </div>
           </a>
         )}
       </div>
       <p className="mt-2 text-md text-gray-500">{description}</p>
-      <div className="flex flex-col gap-2 mt-1 text-lg items-center md:flex-row">
+      <div className="flex gap-2 mt-1 text-lg items-center flex-row invisible md:visible">
         tools:{" "}
         {tools
           ? tools.map(
