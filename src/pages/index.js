@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import profile_pic from "../../public/pfp.jpeg";
 import ProjectCard from "./components/ProjectCard";
 import LinkArrow from "./components/LinkArrow";
@@ -7,8 +6,57 @@ import Header from "./components/Header";
 import ExperienceCard from "./components/ExperienceCard";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-scroll";
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  // Inside your form component
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = {
+      name,
+      email,
+      message,
+    };
+    if (email === "") {
+      alert("Please fill out all the fields");
+      return;
+    }
+    if (name === "") {
+      alert("Please fill out all the fields");
+      return;
+    }
+    if (message === "") {
+      alert("Please fill out all the fields");
+      return;
+    }
+
+    try {
+      setIsLoading(true);
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        alert("Message sent successfully!");
+        // Clear the form or redirect the user
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      alert("An error occurred. Please try again.");
+    }
+    setIsLoading(false);
+  };
+
   useEffect(() => {
     AOS.init({ duration: 500 });
   });
@@ -79,12 +127,13 @@ export default function Home() {
               Last updated: 18 Feb 2024
             </span>
             <div className="flex flex-row items-center gap-4">
-              <a
-                href="mailto:yajatgulati01@gmail.com"
+              <Link
+                to="get-in-touch"
+                smooth={true}
                 className="py-2 px-4 mt-10 text-md text-white bg-black rounded-md hover:bg-white hover:text-black duration-300 ease-in"
               >
                 Get in Touch
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -93,7 +142,7 @@ export default function Home() {
             <div className="flex flex-col gap-3 mt-4">
               <ProjectCard
                 name="Vibes"
-                link="https://devpost.com/software/vibes-1dkayc?ref_content=my-projects-tab&ref_feature=my_projects"
+                link="https://vibes-techfest.vercel.app"
                 githubLink="https://github.com/sheldor07/techfest-24"
                 status="Hackathon"
                 description="Vibes is an AI music platform that was a Top 10 finalist at SCSE TechFest in February 2024. It uses advanced AI models to help content creators generate unique, royalty-free music, addressing copyright issues in the industry.
@@ -118,7 +167,7 @@ export default function Home() {
               />
               <ProjectCard
                 name="Valentine GPT"
-                link="valentinegpt.netlify.app"
+                link="https://valentinegpt.netlify.app/"
                 githubLink="https://github.com/sheldor07/valentinegpt"
                 status="Maintained"
                 description="ValentineGPT is a web app that generates a love letter for you, using OpenAI's GPT-3 technology. The project aims to make the process of writing a love letter easier, by generating a letter that is tailored to your needs."
@@ -163,41 +212,87 @@ export default function Home() {
           </div>
           <div id="contact" className="flex flex-col gap-5 mt-10 mb-24 ">
             <h1 className="mb-5 text-2xl ">contact me</h1>
-            <div className="flex flex-row gap-3">
-              <p className="text-md text-slate-800"> LinkedIn </p>
-              <a
-                href="https://www.linkedin.com/in/yajatgulati"
-                className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-green-300 text-zinc-600 font-medium text-md"
-              >
-                @YajatGulati{" "}
-                <div className="w-4 h-4">
-                  <LinkArrow />
-                </div>
-              </a>
+            <div className="flex flex-row gap-4">
+              <div className="flex flex-col gap-2">
+                <p className="text-md text-slate-800"> LinkedIn </p>
+                <p className="text-md text-slate-800"> Twitter </p>
+                <p className="text-md text-slate-800"> Github </p>
+              </div>
+              <div className="flex flex-col gap-2">
+                <a
+                  href="https://twitter.com/GulatiYajat"
+                  className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-green-300 text-zinc-600 font-medium text-md"
+                >
+                  @GulatiYajat{" "}
+                  <div className="w-4 h-4">
+                    <LinkArrow />
+                  </div>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/yajatgulati"
+                  className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-green-300 text-zinc-600 font-medium text-md"
+                >
+                  @YajatGulati{" "}
+                  <div className="w-4 h-4">
+                    <LinkArrow />
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/sheldor07"
+                  className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-green-300 text-zinc-600 font-medium text-md"
+                >
+                  @sheldor07
+                  <div className="w-4 h-4">
+                    <LinkArrow />
+                  </div>
+                </a>
+              </div>
             </div>
-            <div className="flex flex-row gap-3">
-              <p className="text-md text-slate-800"> Twitter </p>
-              <a
-                href="https://twitter.com/GulatiYajat"
-                className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-green-300 text-zinc-600 font-medium text-md"
-              >
-                @GulatiYajat{" "}
-                <div className="w-4 h-4">
-                  <LinkArrow />
+            <div name="get-in-touch" className="flex flex-col  mt-10 mb-24 ">
+              <h1 className=" text-2xl ">get in touch</h1>{" "}
+              <p className=" mb-4 text-md text-slate-700">
+                (if you're old school)
+              </p>
+              <form onSubmit={handleSubmit}>
+                {" "}
+                <div className="grid grid-cols-2 gap-4 ">
+                  <div className="flex flex-col">
+                    <label className="py-2">Name</label>
+                    <input
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      className="border-2 rounded-md p-2 -md outline-none"
+                      type="text"
+                      id="name"
+                      placeholder="Your Name"
+                    ></input>
+                  </div>
+                  <div className="flex flex-col">
+                    <label className="py-2">Email</label>
+                    <input
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="border-2 rounded-md p-2 -md outline-none"
+                      type="email"
+                      id="email"
+                      placeholder="Your email"
+                    ></input>
+                  </div>
                 </div>
-              </a>
-            </div>
-            <div className="flex flex-row gap-3">
-              <p className="text-md text-slate-800"> Github </p>
-              <a
-                href="https://github.com/sheldor07"
-                className="flex flex-row items-center justify-start gap-0.5 transition-all hover:text-zinc-700 hover:gap-1 active:text-green-300 text-zinc-600 font-medium text-md"
-              >
-                @sheldor07
-                <div className="w-4 h-4">
-                  <LinkArrow />
+                <div className="flex flex-col">
+                  <label className="py-2">Message</label>
+                  <textarea
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    className="border-2 rounded-md p-2 -md  outline-none resize-none h-32"
+                    id="message"
+                    placeholder="Your message"
+                  ></textarea>
                 </div>
-              </a>
+                <button className="w-full items-center flex justify-center bg-green-300 shadow-md px-4 py-2 rounded-md mt-2 md:mt-4 hover:bg-black hover:text-white duration-300">
+                  {isLoading ? <span class="loader"></span> : "Submit"}
+                </button>
+              </form>
             </div>
           </div>
         </div>
