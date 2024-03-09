@@ -137,45 +137,6 @@ export default function Home() {
             </div>
           </div>
 
-          <div name="projects" className="mt-10">
-            <h1 className="text-2xl">my projects</h1>
-            <div className="flex flex-col gap-3 mt-4">
-              <ProjectCard
-                name="Vibes"
-                link="https://vibes-techfest.vercel.app"
-                githubLink="https://github.com/sheldor07/techfest-24"
-                status="Hackathon"
-                description="Vibes is an AI music platform that was a Top 10 finalist at SCSE TechFest in February 2024. It uses advanced AI models to help content creators generate unique, royalty-free music, addressing copyright issues in the industry.
-
-                "
-                tools={["React", "shadcn/UI", "Django", "AWS"]}
-              />{" "}
-              <ProjectCard
-                name="LookOut"
-                link="https://devpost.com/software/lookout-oyrb0z?ref_content=my-projects-tab&ref_feature=my_projects"
-                status="Hackathon"
-                description="Developed 'LookOut,' a device leveraging MultiModal AI to assist visually impaired users by providing spoken responses based on image analysis, showcased at National University of Singapore's Hack and Roll 2024."
-                tools={["Django", "AWS", "Python", "Arduino C"]}
-              />
-              <ProjectCard
-                name="GPT Book Club"
-                link="https://gptbook.club"
-                githubLink="https://github.com/sheldor07/gpt-book-club"
-                status="Ongoing"
-                description="GPT Book Club is an innovative, AI-powered platform that generates concise and engaging book guides, utilizing OpenAI's GPT-3.5 technology. The project aims to modernize the reading experience by delivering essential insights efficiently, catering to the needs of today's busy readers."
-                tools={["NextJS", "TailwindCSS", "Supabase", "OpenAI"]}
-              />
-              <ProjectCard
-                name="Valentine GPT"
-                link="https://valentinegpt.netlify.app/"
-                githubLink="https://github.com/sheldor07/valentinegpt"
-                status="Maintained"
-                description="ValentineGPT is a web app that generates a love letter for you, using OpenAI's GPT-3 technology. The project aims to make the process of writing a love letter easier, by generating a letter that is tailored to your needs."
-                tools={["ReactJS", "OpenAI API"]}
-              />
-            </div>
-          </div>
-
           <div className="mt-10">
             <h1 className="text-2xl">projects i've been paid to work on</h1>
             <div className="flex flex-col gap-3 mt-4">
@@ -207,6 +168,42 @@ export default function Home() {
                   "Github Actions",
                 ]}
                 githubLink="https://github.com/sheldor07/essay-evaluator-research-assistantship" // Add the actual GitHub repo link
+              />
+            </div>
+          </div>
+          <div name="projects" className="mt-10">
+            <h1 className="text-2xl">my projects</h1>
+            <div className="flex flex-col gap-3 mt-4">
+              <ProjectCard
+                name="Vibes"
+                devPostLink="https://devpost.com/software/vibes-1dkayc?ref_content=user-portfolio&ref_feature=in_progress"
+                githubLink="https://github.com/sheldor07/techfest-24"
+                status="Hackathon"
+                description="Vibes is an AI music platform that was a Top 10 finalist at SCSE TechFest in February 2024. It uses advanced AI models to help content creators generate unique, royalty-free music, addressing copyright issues in the industry."
+                tools={["React", "shadcn/UI", "Django", "AWS"]}
+              />{" "}
+              <ProjectCard
+                name="yaR (formerly LookOut)"
+                demoLink="https://devpost.com/software/lookout-oyrb0z?ref_content=my-projects-tab&ref_feature=my_projects"
+                status="Hackathon"
+                description="Developed 'yaR,' a device leveraging MultiModal AI to assist visually impaired users by providing spoken responses based on image analysis, showcased at National University of Singapore's Hack and Roll 2024."
+                tools={["Django", "AWS", "Python", "Arduino C"]}
+              />
+              <ProjectCard
+                name="GPT Book Club"
+                link="https://gptbook.club"
+                githubLink="https://github.com/sheldor07/gpt-book-club"
+                status="Ongoing"
+                description="GPT Book Club is an innovative, AI-powered platform that generates concise and engaging book guides, utilizing OpenAI's GPT-3.5 technology. The project aims to modernize the reading experience by delivering essential insights efficiently, catering to the needs of today's busy readers."
+                tools={["NextJS", "TailwindCSS", "Supabase", "OpenAI"]}
+              />
+              <ProjectCard
+                name="Valentine GPT"
+                link="https://valentinegpt.netlify.app/"
+                githubLink="https://github.com/sheldor07/valentinegpt"
+                status="Maintained"
+                description="ValentineGPT is a web app that generates a love letter for you, using OpenAI's GPT-3 technology. The project aims to make the process of writing a love letter easier, by generating a letter that is tailored to your needs."
+                tools={["ReactJS", "OpenAI API"]}
               />
             </div>
           </div>

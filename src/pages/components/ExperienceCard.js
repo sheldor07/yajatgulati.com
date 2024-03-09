@@ -29,7 +29,7 @@ export default function ExperienceCard({
                   rel="noopener noreferrer"
                   href={liveLink}
                 >
-                  Live Preview
+                  Website
                   <div className="w-4 h-4">
                     <LinkArrow />
                   </div>
