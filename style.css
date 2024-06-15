@@ -48,7 +48,7 @@ a {
   background-color: currentColor;
   transition: width 0.3s;
 }
-.card-link:hover::after {
+.text-link:hover::after {
   width: 100%;
 }
 .nav {
@@ -70,10 +70,9 @@ a {
 .subheader-text-grey {
   color: var(--accent-color-grey);
 }
-.timestamp{
-    color: var(--accent-color-grey);
-    font-size: var(--font-size-p);
-    
+.timestamp {
+  color: var(--accent-color-grey);
+  font-size: var(--font-size-p);
 }
 .subheader-text-white {
   color: var(--accent-color-white);
