@@ -37,6 +37,16 @@ a {
   text-decoration: none;
   font-size: var(--font-size-p);
   overflow: hidden;
+  width: fit-content;
+}
+#personal-update {
+  position: relative;
+}
+.timestamp {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+
 }
 .text-link::after {
   content: "";
@@ -69,10 +79,10 @@ a {
 }
 .subheader-text-grey {
   color: var(--accent-color-grey);
+  font-size: var(--font-size-p);
 }
 .timestamp {
   color: var(--accent-color-grey);
-  font-size: var(--font-size-p);
 }
 .subheader-text-white {
   color: var(--accent-color-white);
@@ -114,7 +124,10 @@ a {
 .content {
   font-size: var(--font-size-content);
 }
-
+.writing-links-container {
+  display: flex;
+  flex-direction: column;   
+}
 @media (max-width: 768px) {
   .header-grid {
     grid-template-columns: 1fr; /* Stack the columns on smaller screens */
