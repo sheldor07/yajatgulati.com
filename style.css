@@ -16,7 +16,7 @@ body {
   color: var(--text-color);
   height: 100vh;
   margin: 0;
-  padding: 0;
+  padding: 10px;
 }
 
 h1 {
@@ -46,8 +46,8 @@ a {
 }
 .timestamp {
   position: absolute;
-  right: 20px;
-  bottom: 20px;
+  right: 30px;
+  bottom: 30px;
 }
 .text-link::after {
   content: "";
@@ -98,11 +98,12 @@ a {
 }
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
   padding-inline: 20px;
   max-width: 100vw;
   padding-bottom: 50px;
+  overflow: auto;
 }
 .card {
   position: relative;
@@ -113,7 +114,7 @@ a {
   width: 100%;
   display: block;
   border-radius: 10px;
-  object-fit: fit;
+  object-fit: fill;
   transition: transform 0.5s ease; /* Smooth transition for the effect */
 }
 .card-text {
@@ -132,23 +133,6 @@ a {
   display: flex;
   flex-direction: column;
 }
-@media (max-width: 768px) {
-  .header-grid {
-    grid-template-columns: 1fr; /* Stack the columns on smaller screens */
-  }
-  .card-grid {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(250px, 1fr)
-    ); /* Adjust the minimum width of the cards for smaller screens */
-  }
-}
-@media (max-width: 600px) {
-  .header-grid,
-  .card-grid {
-    grid-template-columns: 1fr; /* This should stack the columns on smaller screens */
-  }
-}
 
 #profile-card {
   position: relative;
@@ -159,4 +143,33 @@ a {
   width: 200px;
   right: 0px;
   bottom: 100px;
+}
+@media (max-width: 1000px) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .header-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  #profile-card {
+    grid-column:span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 20px; /* Adjust gap for better spacing */
+  }
+  .subheader-text-grey {
+    font-size: 12px; /* Adjust font size for better readability */
+  }
+  .text-link{
+    font-size: 12px; /* Adjust font size for better readability */
+  }
+  #profile-card img {
+    width: 100px; /* Adjust the size of the profile image */
+    right: 30px; /* Adjust positioning to fit within the screen */
+    bottom: 150px; /* Adjust positioning to fit within the screen */
+  }
 }

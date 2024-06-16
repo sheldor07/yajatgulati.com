@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const profileCard = document.getElementById("profile-card");
   const image = profileCard.querySelector("img");
 
-  profileCard.addEventListener("mousemove", (e) => {
+  image.addEventListener("mousemove", (e) => {
     const rect = e.target.getBoundingClientRect();
     const x = e.clientX - rect.left; // x position within the element.
     const y = e.clientY - rect.top; // y position within the element.
