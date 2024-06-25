@@ -4,9 +4,15 @@
   --accent-color-grey: #737373;
   --accent-color-white: #d4d4d4;
   --accent-color-black: #1a1a1a;
-  --font-size-p: 14px;
-  --font-size-content: 16px;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 22px;
+  --font-size-xl: 28px;
+  --font-size-xxl: 35px;
+  --font-size-h1: 36px;
 }
+
 body {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -23,32 +29,41 @@ h1 {
   font-weight: 300;
   padding: 0;
   margin: 0;
+  letter-spacing: -0.22px;
+  font-size: var(--font-size-h1);
+  font-weight: 500;
+  line-height: 1.2;
 }
+
 p {
-  font-weight: 300;
-  font-size: var(--font-size-p);
-  padding: 0px;
+  margin-bottom: 0;
+  font-size: var(--font-size-sm);
 }
+
 a {
   text-decoration: none;
   color: var(--accent-color-grey);
 }
+
 .text-link {
   position: relative;
   color: var(--accent-color-grey);
   text-decoration: none;
-  font-size: var(--font-size-p);
+  font-size: var(--font-size-xs);
   overflow: hidden;
   width: fit-content;
 }
+
 #personal-update {
   position: relative;
 }
+
 .timestamp {
   position: absolute;
   right: 30px;
   bottom: 30px;
 }
+
 .text-link::after {
   content: "";
   position: absolute;
@@ -59,43 +74,54 @@ a {
   background-color: currentColor;
   transition: width 0.3s;
 }
+
 .text-link:hover::after {
   width: 100%;
 }
+
 .nav {
-  flex-direction: coloumn;
+  flex-direction: column;
 }
+
 .nav a {
   padding: 10px;
 }
+
 .header-text {
   padding-top: 100px;
 }
+
 .header-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 10px 10px;
+  gap: 10px;
   padding: 20px;
+  margin-bottom: 20px; /* Add margin-bottom to separate from card-grid */
 }
+
 .subheader-text-grey {
   color: var(--accent-color-grey);
-  font-size: var(--font-size-p);
+  font-size: var(--font-size-xs);
 }
+
 .timestamp {
   color: var(--accent-color-grey);
 }
+
 .subheader-text-white {
   color: var(--accent-color-white);
 }
+
 .text-card {
   background-color: var(--accent-color-black);
   padding: 30px;
   border-radius: 10px;
 }
-.text-card.span-two-coloumns {
+
+.span-two-coloumns {
   grid-column: span 2;
 }
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -109,14 +135,21 @@ a {
   position: relative;
   text-align: left;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%; /* Ensure the card takes up full height */
 }
+
 .card img {
   width: 100%;
+  height: auto; /* Maintain aspect ratio */
   display: block;
   border-radius: 10px;
-  object-fit: fill;
+  object-fit: cover;
   transition: transform 0.5s ease; /* Smooth transition for the effect */
 }
+
 .card-text {
   position: absolute;
   bottom: 10px;
@@ -126,9 +159,14 @@ a {
   padding: 5px;
   border-radius: 8px;
 }
+
 .content {
-  font-size: var(--font-size-content);
+  letter-spacing: -0.04px;
+  font-size: var(--font-size-md);
+  font-weight: 300;
+  line-height: 1.35;
 }
+
 .writing-links-container {
   display: flex;
   flex-direction: column;
@@ -137,39 +175,66 @@ a {
 #profile-card {
   position: relative;
 }
+
 #profile-card img {
   position: absolute;
-  display: inline;
   width: 200px;
-  right: 0px;
+  right: 0;
   bottom: 100px;
 }
+
 @media (max-width: 1000px) {
   .card-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
+
   .header-grid {
     grid-template-columns: 1fr 1fr;
   }
+
   #profile-card {
-    grid-column:span 2;
+    grid-column: span 2;
+  }
+
+  .text-card.span-two-columns {
+    grid-column: span 2;
   }
 }
 
 @media (max-width: 600px) {
   .card-grid {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 20px; /* Adjust gap for better spacing */
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
+
+  .header-grid {
+    grid-template-columns: 1fr;
+  }
+
   .subheader-text-grey {
-    font-size: 12px; /* Adjust font size for better readability */
+    font-size: 12px;
   }
-  .text-link{
-    font-size: 12px; /* Adjust font size for better readability */
+
+  .text-link {
+    font-size: 12px;
   }
+
   #profile-card img {
-    width: 100px; /* Adjust the size of the profile image */
-    right: 30px; /* Adjust positioning to fit within the screen */
-    bottom: 150px; /* Adjust positioning to fit within the screen */
+    width: 100px;
+    right: 30px;
+    bottom: 150px;
+  }
+
+  .header-grid{
+    display:flex;
+    flex-direction: column  ;
+  }
+  .card-grid{
+    display:flex;
+    flex-direction: column;
+  }
+  .timestamp {
+    right: 20px;
+    bottom: 20px;
   }
 }
