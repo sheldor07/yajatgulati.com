@@ -7,10 +7,10 @@
   --font-size-xs: 12px;
   --font-size-sm: 14px;
   --font-size-md: 16px;
-  --font-size-lg: 22px;
-  --font-size-xl: 28px;
-  --font-size-xxl: 35px;
-  --font-size-h1: 36px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
+  --font-size-3xl: 48px;
 }
 
 body {
@@ -22,22 +22,24 @@ body {
   color: var(--text-color);
   height: 100vh;
   margin: 0;
-  padding: 10px;
+  padding: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: var(--font-size-md);
+  line-height: 1.6;
 }
 
 h1 {
-  font-weight: 300;
-  padding: 0;
-  margin: 0;
-  letter-spacing: -0.22px;
-  font-size: var(--font-size-h1);
   font-weight: 500;
+  padding: 0;
+  margin: 0 0 0.5em 0;
+  letter-spacing: -0.02em;
+  font-size: var(--font-size-xxl);
   line-height: 1.2;
 }
 
 p {
-  margin-bottom: 0;
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-md);
 }
 
 a {
@@ -62,6 +64,7 @@ a {
   position: absolute;
   right: 30px;
   bottom: 30px;
+  font-size: var(--font-size-sm);
 }
 
 .text-link::after {
@@ -70,7 +73,7 @@ a {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 1px;
   background-color: currentColor;
   transition: width 0.3s;
 }
@@ -84,37 +87,38 @@ a {
 }
 
 .nav a {
-  padding: 10px;
+  padding: 5px 0;
 }
 
 .header-text {
-  padding-top: 100px;
+  margin-top: 96px;
+  font-size: var(--font-size-3xl);
 }
 
 .header-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
-  padding: 20px;
-  margin-bottom: 20px; /* Add margin-bottom to separate from card-grid */
+  gap: 20px;
+  padding: 20px 0;
+  margin-bottom: 1fr;
 }
 
 .subheader-text-grey {
   color: var(--accent-color-grey);
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
 }
-
-.timestamp {
-  color: var(--accent-color-grey);
+.subheader-text-container {
+  margin-top: 48px;
 }
 
 .subheader-text-white {
   color: var(--accent-color-white);
+  font-size: var(--font-size-md);
 }
 
 .text-card {
   background-color: var(--accent-color-black);
-  padding: 35px;
+  padding: 36px;
   border-radius: 10px;
 }
 
@@ -126,11 +130,12 @@ a {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
-  padding-inline: 20px;
-  max-width: 100vw;
+  padding-inline: 0;
+  max-width: 100%;
   padding-bottom: 50px;
   overflow: auto;
 }
+
 .card {
   position: relative;
   text-align: left;
@@ -138,16 +143,16 @@ a {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%; /* Ensure the card takes up full height */
+  height: 100%;
 }
 
 .card img {
   width: 100%;
-  height: auto; /* Maintain aspect ratio */
+  height: auto;
   display: block;
   border-radius: 10px;
-  object-fit: cover;
-  transition: transform 0.5s ease; /* Smooth transition for the effect */
+  object-fit: fill;
+  transition: transform 0.5s ease;
 }
 
 .card-text {
@@ -155,16 +160,17 @@ a {
   bottom: 10px;
   left: 10px;
   color: var(--text-color);
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px;
-  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 8px;
+  border-radius: 5px;
+  font-size: var(--font-size-sm);
 }
 
 .content {
-  letter-spacing: -0.04px;
+  letter-spacing: -0.01em;
   font-size: var(--font-size-md);
   font-weight: 300;
-  line-height: 1.35;
+  line-height: 1.5;
 }
 
 .writing-links-container {
@@ -178,9 +184,9 @@ a {
 
 #profile-card img {
   position: absolute;
-  width: 200px;
-  right: 0;
-  bottom: 100px;
+  width: 150px;
+  right: 20px;
+  bottom: 80px;
 }
 
 @media (max-width: 1000px) {
@@ -202,6 +208,20 @@ a {
 }
 
 @media (max-width: 600px) {
+  :root {
+    --font-size-xs: 10px;
+    --font-size-sm: 12px;
+    --font-size-md: 14px;
+    --font-size-lg: 18px;
+    --font-size-xl: 22px;
+    --font-size-xxl: 28px;
+    --font-size-3xl: 32px;
+  }
+
+  body {
+    padding: 10px;
+  }
+
   .card-grid {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -211,34 +231,20 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .subheader-text-grey {
-    font-size: var(--font-size-sm);
-  }
-
-  .text-link {
-    font-size: var(--font-size-sm);
-  }
-
   #profile-card img {
     width: 100px;
-    right: 30px;
-    bottom: 150px;
+    right: 20px;
+    bottom: 100px;
   }
 
-  .header-grid {
-    display: flex;
-    flex-direction: column;
-  }
+  .header-grid,
   .card-grid {
     display: flex;
     flex-direction: column;
   }
+
   .timestamp {
     right: 10px;
-    bottom: 12px;
-    font-size: var(--font-size-xs);
+    bottom: 10px;
   }
-body{
-  padding:5px;
-}
 }
